@@ -4,7 +4,6 @@ const router = express.Router()
 
 router
 .get("/:id", getUserById)
-.post("/")
 .patch("/", updateUser)
 .patch("/updateAddress",updateUserAddress)
 .delete("/address/:id/:addressId",deleteUserAddressById)

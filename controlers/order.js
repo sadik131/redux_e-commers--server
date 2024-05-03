@@ -19,9 +19,11 @@ exports.getAllOrders = async (req, res) => {
 
 // get all products by Id
 exports.getOrderByUserId = async (req, res) => {
+    // const {id} = req.params
+    const id = req.user._id
     try {
-        const { id } = req.params
         const result = await Order.find({ userId: id })
+        console.log(result)
         res.status(200).json({
             success: true,
             result
